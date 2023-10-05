@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    ---font-principal: 'Roboto', sans-serif;
+    ---tomato: hsl(4, 100%, 67%);
+    ---dark-slate-grey: hsl(234, 29%, 20%);
+    ---charcoal-grey: hsl(235, 18%, 26%);
+    ---grey: hsl(231, 7%, 60%);
+    ---white:  hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(---font-principal);
+}
+.dark-mode{
+    background-color: var(---charcoal-grey);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(---white);
+    padding: 1.5rem;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 900px;
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.title{
+    font-size: 3rem;
+    color: var(---dark-slate-grey);
+}
+.sub-title{
+    font-size: 1rem;
+    color: var(---dark-slate-grey);
+    width: 100%;
+    max-width: 400px;
+}
+.benefits{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: .7rem;
+    padding: 1rem;
+}
+.image{
+    width: 100%;
+}
+.options{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+.text-list{
+    color: var(---dark-slate-grey);
+    font-size: 1rem;
+}
+.subscribe-container{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: .7rem;
+}
+.email{
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(---dark-slate-grey);
+}
+.email-adress{
+    max-width: 350px;
+    width: 100%;
+    padding: .8rem;
+    border-radius: 4px;
+    border: 1px solid var(---grey);
+    font-size: 1rem;
+    border: 1px solid var(---charcoal-grey);
+    outline: none;
+}
+.sub-btn{
+    padding: .9rem;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+    color: var(---white);
+    font-size: 1rem;
+    background-color: var(---dark-slate-grey);
+    transition: .3s;
+}
+.sub-btn:hover{
+    background-color: var(---tomato);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(---grey);
+}
+.emails-texts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+}
+.email.error{
+    text-align: end;
+    color: var(---tomato);
+    display: none;
+}
+.email-adress.error{
+    background-color: hsl(3, 56%, 88%);
+    border: 1px solid var(---tomato);
+    transition: .3s;
+}
+.email-adress.error::placeholder{
+    color: var(---tomato);
+}
+.sucess-modal{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(---white);
+    color: var(---dark-slate-grey);
+    padding: 2rem;
+    border-radius: 40px;
+    transition: .3s;
+    animation: showMessage .3s ease-in-out;
+}
+.sucess{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.sub-message{
+    max-width: 400px;
+    font-size: 1.2rem;
+}
+.sent-email{
+    font-weight: bold;
+}
+.dimiss{
+    padding: 1.1rem;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    color: var(---white);
+    font-size: 1rem;
+    background-color: var(---dark-slate-grey);
+    transition: .3s;
+}
+.dimiss:hover{
+    background-color: var(---tomato);
+    cursor: pointer;
+}
+@keyframes showMessage{
+    from{
+        transform: translateY(-90px);
+    }
+    to{
+        transform: translateY(90px);
+    }
+}
+@media(max-width: 767px){
+    .container{
+        padding: 0;
+    }
+    .content{
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 0px;
+    }
+    .image{
+        content: url(../images/illustration-sign-up-mobile.svg);
+    }
+    .sub-title{
+        max-width: 340px;
+    }
+    .content-left{
+        align-items: center;
+        justify-content: center;
+    }
+    .sucess-modal{
+        width: 100%;
+        border-radius: 0;
+        height: 100vh;
+    }
+}

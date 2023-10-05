@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <div class="sucess-modal" id="sucess-box">
+        <div class="sucess">
+          <img src="./assets/images/icon-success.svg" alt="Sucess Icon">
+          <h1 class="sucess-message">Thanks for subscribing!</h1>
+          <p class="sub-message">A confirmation email has been  sent to <span class="sent-email" id="email-sent">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button class="dimiss">Dismiss message</button>
+    </div>
+    <div class="content" id="content-page">
+      <picture class="image-container">
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Sign up illustration" class="image">
+      </picture>
+      <div class="content-left">
+        <h1 class="title">Stay updated!</h1>
+        <p class="sub-title">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="benefits">
+          <li class="options">
+            <img src="./assets/images/icon-list.svg" alt="Icon List">
+            <span class="text-list">Product discovery and building what matters</span>
+          </li>
+          <li class="options">
+            <img src="./assets/images/icon-list.svg" alt="Icon List">
+            <span class="text-list">Measuring to ensure updates are a sucess</span>
+          </li>
+          <li class="options">
+            <img src="./assets/images/icon-list.svg" alt="Icon List">
+            <span class="text-list">And much more!</span>
+          </li>
+        </ul>
+        <div class="subscribe-container">
+          <div class="emails-texts">
+            <label for="email" class="email">Email addres</label>
+            <label for="email" class="email error">Valid email required</label>
+          </div>
+          <input type="email" name="email" id="email" class="email-adress" placeholder="email@company.com">
+          <button id="btn-sub" class="sub-btn">Subscribe to monthly newsletter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
